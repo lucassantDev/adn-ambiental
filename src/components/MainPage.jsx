@@ -1,4 +1,17 @@
+import { useState } from "react"
+
 export default function MainPage() {
+    const [modalColaborador, setModalColaborador] = useState(false)
+    
+    const exibirModalColaborador = () => {
+        alert("teste de cadastro")
+        setModalColaborador(true)
+    }
+
+    const edicaoColaboradores = () => {
+        alert("teste de caminho para edição de colaboradores")
+    }
+
     return (
         <>
             <section className='w-full h-screen border-2 px-6'>
@@ -13,6 +26,11 @@ export default function MainPage() {
                     <div>
                     {/* futuro menu */}
                     </div>
+                </div>
+
+                <div className="w-full h-16 border-2 flex justify-evenly ">
+                    <button className="p-1 border rounded-md font-semibold" onClick={() => exibirModalColaborador()}>+ Novo Colaborador</button>
+                    <button className="p-1 border rounded-md font-semibold" onClick={() => edicaoColaboradores()}>Edição Colaboradores</button>
                 </div>
 
                 {/* coletas de hoje */}
