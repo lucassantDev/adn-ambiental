@@ -12,6 +12,10 @@ export default function MainPage() {
         alert("teste de caminho para edição de colaboradores")
     }
 
+    const cadastroColeta = () => {
+        alert("teste de cadastro de coleta")
+    }
+
     return (
         <>
             <section className='w-full h-screen border-2 px-6'>
@@ -28,13 +32,14 @@ export default function MainPage() {
                     </div>
                 </div>
 
-                <div className="w-full h-16 border-2 flex justify-evenly ">
-                    <button className="p-1 border rounded-md font-semibold" onClick={() => exibirModalColaborador()}>+ Novo Colaborador</button>
-                    <button className="p-1 border rounded-md font-semibold" onClick={() => edicaoColaboradores()}>Edição Colaboradores</button>
+                <div className="w-full h-fit py-2 gap-2 flex flex-col ">
+                    <button className="p-1 border font-semibold" onClick={() => exibirModalColaborador()}>+ Novo Colaborador</button>
+                    <button className="p-1 border font-semibold" onClick={() => edicaoColaboradores()}>Edição Colaboradores</button>
+                    <button className="p-1 border font-semibold" onClick={() => cadastroColeta()}>Cadastrar Coleta</button>
                 </div>
 
                 {/* coletas de hoje */}
-                <div className="w-full border flex flex-col">
+                <div className="w-full border flex flex-col mt-4">
                     <h2 className="font-semibold text-2xl mt-4">Coletas de hoje</h2>
                     <div>
                         {/* coletas recentes */}
