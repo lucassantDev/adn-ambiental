@@ -1,12 +1,12 @@
 import { useState } from "react"
+import EmployeeForm from "./forms/EmployeeForm"
 
 export default function MainPage() {
     const [modalColaborador, setModalColaborador] = useState(false)
     
-    const exibirModalColaborador = () => {
-        alert("teste de cadastro")
-        setModalColaborador(true)
-    }
+    const exibirModalColaborador = () => setModalColaborador(true)
+    const fecharModalColaborador = () => setModalColaborador(false)
+
 
     const edicaoColaboradores = () => {
         alert("teste de caminho para edição de colaboradores")
@@ -33,9 +33,10 @@ export default function MainPage() {
                 </div>
 
                 <div className="w-full h-fit py-2 gap-2 flex flex-col ">
-                    <button className="p-1 border font-semibold" onClick={() => exibirModalColaborador()}>+ Novo Colaborador</button>
-                    <button className="p-1 border font-semibold" onClick={() => edicaoColaboradores()}>Edição Colaboradores</button>
-                    <button className="p-1 border font-semibold" onClick={() => cadastroColeta()}>Cadastrar Coleta</button>
+                    <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => exibirModalColaborador()}>+ Novo Colaborador</button>
+                    {modalColaborador && <EmployeeForm onClose={fecharModalColaborador} />}
+                    <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => edicaoColaboradores()}>Edição Colaboradores</button>
+                    <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => cadastroColeta()}>Cadastrar Coleta</button>
                 </div>
 
                 {/* coletas de hoje */}

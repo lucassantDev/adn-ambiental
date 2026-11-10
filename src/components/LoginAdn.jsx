@@ -10,9 +10,9 @@ export default function LoginAdn() {
                 />
 
                 <form action="" className="flex flex-col gap-2 border p-10">
-                    <input type="text" placeholder='Usuário' className="border p-2"/>
+                    <input type="text" placeholder='CPF' className="border p-2"/>
                     <input type="password" placeholder='Senha' className="border p-2" />
-                    <button className="border py-2">Acessar</button>
+                    <button className="border py-2 cursor-pointer hover:bg-slate-50">Acessar</button>
                 </form>
             </section>
         </>
