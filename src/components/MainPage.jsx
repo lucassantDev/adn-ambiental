@@ -1,11 +1,16 @@
 import { useState } from "react"
 import EmployeeForm from "./forms/EmployeeForm"
+import CollectionForm from "./forms/CollectionForm"
 
 export default function MainPage() {
     const [modalColaborador, setModalColaborador] = useState(false)
+    const [modalCadastroColeta, setModalCadastroColeta] = useState(false)
     
     const exibirModalColaborador = () => setModalColaborador(true)
     const fecharModalColaborador = () => setModalColaborador(false)
+    
+    const exibirModalCadastroColeta = () => setModalCadastroColeta(true)
+    const fecharModalCadastroColeta = () => setModalCadastroColeta(false)
 
 
     const edicaoColaboradores = () => {
@@ -36,7 +41,8 @@ export default function MainPage() {
                     <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => exibirModalColaborador()}>+ Novo Colaborador</button>
                     {modalColaborador && <EmployeeForm onClose={fecharModalColaborador} />}
                     <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => edicaoColaboradores()}>Edição Colaboradores</button>
-                    <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => cadastroColeta()}>Cadastrar Coleta</button>
+                    <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => exibirModalCadastroColeta()}>Cadastrar Coleta</button>
+                    {modalCadastroColeta && <CollectionForm onClose={fecharModalCadastroColeta} />}
                 </div>
 
                 {/* coletas de hoje */}
