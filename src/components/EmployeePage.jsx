@@ -1,4 +1,5 @@
 import { useState } from "react"
+import {Plus} from 'lucide-react'
 import CollectionForm from "./forms/CollectionForm"
 
 export default function EmployeePage() {
@@ -26,7 +27,7 @@ export default function EmployeePage() {
                 </div>
 
                 <div className="w-full h-fit py-2 gap-2 flex flex-col ">
-                        <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => exibirModalCadastroColeta()}>Cadastrar Coleta</button>
+                        <button className="cursor-pointer flex align-start hover:slate-50 p-1 border font-semibold" onClick={() => exibirModalCadastroColeta()}> <Plus /> Cadastrar Coleta</button>
                         {modalCadastroColeta && <CollectionForm onClose={fecharModalCadastroColeta} />}
                 </div>
 

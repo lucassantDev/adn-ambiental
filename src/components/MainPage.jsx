@@ -1,4 +1,5 @@
 import { useState } from "react"
+import {Plus, Pencil, SquarePen} from 'lucide-react'
 import EmployeeForm from "./forms/EmployeeForm"
 import CollectionForm from "./forms/CollectionForm"
 
@@ -34,10 +35,10 @@ export default function MainPage() {
                 </div>
 
                 <div className="w-full h-fit py-2 gap-2 flex flex-col ">
-                    <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => exibirModalColaborador()}>+ Novo Colaborador</button>
+                    <button className="cursor-pointer flex align-start hover:slate-50 p-1 border font-semibold" onClick={() => exibirModalColaborador()}> <Plus /> Novo Colaborador</button>
                     {modalColaborador && <EmployeeForm onClose={fecharModalColaborador} />}
-                    <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => edicaoColaboradores()}>Edição Colaboradores</button>
-                    <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => exibirModalCadastroColeta()}>Cadastrar Coleta</button>
+                    <button className="cursor-pointer flex align-start hover:slate-50 p-1 border font-semibold" onClick={() => edicaoColaboradores()}> <Pencil /> Edição Colaboradores</button>
+                    <button className="cursor-pointer flex align-start hover:slate-50 p-1 border font-semibold" onClick={() => exibirModalCadastroColeta()}> <SquarePen /> Cadastrar Coleta</button>
                     {modalCadastroColeta && <CollectionForm onClose={fecharModalCadastroColeta} />}
                 </div>
 
