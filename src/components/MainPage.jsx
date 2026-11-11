@@ -17,10 +17,6 @@ export default function MainPage() {
         alert("teste de caminho para edição de colaboradores")
     }
 
-    const cadastroColeta = () => {
-        alert("teste de cadastro de coleta")
-    }
-
     return (
         <>
             <section className='w-full h-screen border-2 px-6'>
