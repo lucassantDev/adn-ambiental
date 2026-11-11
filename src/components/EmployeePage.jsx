@@ -29,6 +29,13 @@ export default function EmployeePage() {
                         <button className="cursor-pointer hover:slate-50 p-1 border font-semibold" onClick={() => exibirModalCadastroColeta()}>Cadastrar Coleta</button>
                         {modalCadastroColeta && <CollectionForm onClose={fecharModalCadastroColeta} />}
                 </div>
+
+                <div className="w-full border flex flex-col mt-4">
+                    <h2 className="font-semibold text-2xl mt-4">Coletas recentes</h2>
+                    <div>
+                        {/* coletas recentes do colaborador */}
+                    </div>
+                </div>
             </section>
         </>
     )
